@@ -1,3 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h> /* atoi() */
+
+static unsigned int calls;
+
 
 // Directly from definition
 unsigned int naive_ackermann(unsigned int m, unsigned int n) {
@@ -43,4 +48,26 @@ unsigned int formula_ackermann(unsigned int m, unsigned int n) {
             break;
         }
     }
+}
+
+
+
+int main(int argc, char* argv[]) {
+    unsigned int m, n, result;
+    m = (unsigned)atoi(argv[1]);
+    n = (unsigned)atoi(argv[2]);
+
+    calls = 0;
+    result = naive_ackermann(m, n);
+    printf("Naive:     %u (%u calls)\n", result, calls);
+
+    calls = 0;
+    result = iterative_ackermann(m, n);
+    printf("Iterative: %u (%u calls)\n", result, calls);
+
+    calls = 0;
+    result = formula_ackermann(m, n);
+    printf("Formula:   %u (%u calls)\n", result, calls);
+
+    return 0;
 }
