@@ -23,3 +23,24 @@ unsigned int iterative_ackermann(unsigned int m, unsigned int n) {
     }
     return n + 1;
 }
+
+// Precomputed for small m
+unsigned int formula_ackermann(unsigned int m, unsigned int n) {
+    calls++;
+    while(1) {
+        switch(m) {
+        case 0:  return n + 1;
+        case 1:  return n + 2;
+        case 2:  return (n << 1) + 3;
+        case 3:  return (1 << (n+3)) - 3;
+        default:
+            if (n == 0) {
+                n = 1;
+            } else {
+                n = formula_ackermann(m, n - 1);
+            }
+            m--;
+            break;
+        }
+    }
+}
