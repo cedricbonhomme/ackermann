@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+        "fmt"
+        "flag"
+        "strconv"
+)
 
 func ackermann(m int, n int) int {
     if m == 0 {
@@ -13,5 +17,9 @@ func ackermann(m int, n int) int {
 }
 
 func main() {
-    fmt.Println(ackermann(4,2))
+    flag.Parse()
+    argv := flag.Args()
+    m, _ := strconv.Atoi(argv[0])
+    n, _ := strconv.Atoi(argv[1])
+    fmt.Println(ackermann(m, n))
 }
