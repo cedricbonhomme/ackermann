@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 #-*- coding: utf-8 -*-
 
-
+import sys
 
 def ackermann_1(m, n):
     if m == 0:
@@ -28,5 +28,7 @@ def ackermann_2(m, n):
         return n + 1
 
 if __name__ == "__main__":
-    ackermann_1(4, 2)
-    ackermann_2(4, 2)
+    # Point of entry in execution mode
+    m, n = int(sys.argv[1]), int(sys.argv[2])
+    print(ackermann_1(m, n))
+    print(ackermann_2(m, n))
