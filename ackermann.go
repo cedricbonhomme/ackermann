@@ -39,7 +39,7 @@ func formula_ackermann(m int, n uint) uint {
             }
         }
     }
-    return uint(42)
+    return uint(42) // mandatory, compiler bug?
 }
 
 func main() {
