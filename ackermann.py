@@ -2,6 +2,10 @@
 #-*- coding: utf-8 -*-
 
 import sys
+import resource
+
+resource.setrlimit(resource.RLIMIT_STACK, (2**29,-1))
+sys.setrecursionlimit(10**6)
 
 def ackermann_1(m, n):
     if m == 0:
