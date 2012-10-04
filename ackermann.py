@@ -8,7 +8,7 @@ import resource
 resource.setrlimit(resource.RLIMIT_STACK, (2**29,-1))
 sys.setrecursionlimit(10**6)
 
-def ackermann_1(m, n):
+def naive_ackermann(m, n):
     """
     Directly from definition
     """
@@ -19,7 +19,7 @@ def ackermann_1(m, n):
     else:
         return ackermann_1(m - 1, ackermann_1(m, n - 1))
 
-def ackermann_2(m, n):
+def formula_ackermann(m, n):
     """
     Precomputed for small m
     """
@@ -41,5 +41,5 @@ def ackermann_2(m, n):
 if __name__ == "__main__":
     # Point of entry in execution mode
     m, n = int(sys.argv[1]), int(sys.argv[2])
-    print(ackermann_1(m, n))
-    print(ackermann_2(m, n))
+    print(naive_ackermann(m, n))
+    print(formula_ackermann(m, n))
