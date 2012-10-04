@@ -22,25 +22,28 @@ echo
 
 echo "-= Launching tests =-"
 
+m=3
+n=12
+
 echo "C implementation:"
-time ./ackermann-c 3 12
+time ./ackermann-c $m $n
 echo "------------------------------------------"
 
 echo "Go implementation:"
-time ./ackermann-go 3 12
+time ./ackermann-go $m $n
 echo "------------------------------------------"
 
 echo "Pascal implementation:"
-time ./ackermann-pascal 3 12
+time ./ackermann-pascal $m $n
 echo "------------------------------------------"
 
 echo "OCaml implementation:"
-time ./ackermann-ocaml 3 12
+time ./ackermann-ocaml $m $n
 echo "------------------------------------------"
 
 echo "Haskell implementation:"
-time ./ackermann-haskell 3 12
+time ./ackermann-haskell $m $n
 echo "------------------------------------------"
 
 echo "Python implementation:"
-time python ackermann-python.pyc 3 12
+time python ackermann-python.pyc $m $n
