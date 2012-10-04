@@ -4,10 +4,14 @@
 import sys
 import resource
 
+# Increases Python's recursion limit and the size of the stack.
 resource.setrlimit(resource.RLIMIT_STACK, (2**29,-1))
 sys.setrecursionlimit(10**6)
 
 def ackermann_1(m, n):
+    """
+    Directly from definition
+    """
     if m == 0:
         return n + 1
     elif n == 0:
@@ -16,6 +20,9 @@ def ackermann_1(m, n):
         return ackermann_1(m - 1, ackermann_1(m, n - 1))
 
 def ackermann_2(m, n):
+    """
+    Precomputed for small m
+    """
     while m >= 4:
         if n == 0:
             n = 1
