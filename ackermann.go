@@ -6,6 +6,7 @@ import (
         "strconv"
 )
 
+// Directly from definition
 func ackermann(m int, n int) int {
     if m == 0 {
         return n+1
@@ -17,6 +18,7 @@ func ackermann(m int, n int) int {
 }
 
 
+// Precomputed for small m
 func formula_ackermann(m int, n uint) uint {
     for {
         switch m {
