@@ -61,13 +61,13 @@ int main(int argc, char* argv[]) {
     result = naive_ackermann(m, n);
     printf("Naive:     %u (%u calls)\n", result, calls);
 
-    calls = 0;
-    result = iterative_ackermann(m, n);
-    printf("Iterative: %u (%u calls)\n", result, calls);
-
-    calls = 0;
-    result = formula_ackermann(m, n);
-    printf("Formula:   %u (%u calls)\n", result, calls);
+//     calls = 0;
+//     result = iterative_ackermann(m, n);
+//     printf("Iterative: %u (%u calls)\n", result, calls);
+// 
+//     calls = 0;
+//     result = formula_ackermann(m, n);
+//     printf("Formula:   %u (%u calls)\n", result, calls);
 
     return 0;
 }

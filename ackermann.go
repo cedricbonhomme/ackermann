@@ -50,6 +50,6 @@ func main() {
     m, _ := strconv.Atoi(argv[0])
     n, _ := strconv.Atoi(argv[1])
     fmt.Println(ackermann(m, n))
-    o := uint(n)
-    fmt.Println(formula_ackermann(m, o))
+    //o := uint(n)
+    //fmt.Println(formula_ackermann(m, o))
 }

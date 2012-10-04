@@ -15,9 +15,9 @@ def naive_ackermann(m, n):
     if m == 0:
         return n + 1
     elif n == 0:
-        return ackermann_1(m - 1, 1)
+        return naive_ackermann(m - 1, 1)
     else:
-        return ackermann_1(m - 1, ackermann_1(m, n - 1))
+        return naive_ackermann(m - 1, naive_ackermann(m, n - 1))
 
 def formula_ackermann(m, n):
     """
@@ -27,7 +27,7 @@ def formula_ackermann(m, n):
         if n == 0:
             n = 1
         else:
-            n = ackermann_2(m, n - 1)
+            n = formula_ackermann(m, n - 1)
         m -= 1
     if m == 3:
         return (1 << n + 3) - 3
@@ -42,4 +42,4 @@ if __name__ == "__main__":
     # Point of entry in execution mode
     m, n = int(sys.argv[1]), int(sys.argv[2])
     print(naive_ackermann(m, n))
-    print(formula_ackermann(m, n))
+    #print(formula_ackermann(m, n))
