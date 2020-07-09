@@ -17,7 +17,7 @@ var
 
 
 begin
-    m := 3 //StrToInt(ParamStr(1));
-    n := 12 //StrToInt(ParamStr(2));
+    m := 3; //StrToInt(ParamStr(1));
+    n := 12; //StrToInt(ParamStr(2));
     WriteLn(ackermann(m,n));
 end.

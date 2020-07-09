@@ -10,6 +10,8 @@
 
 TODO: GitHub Action for the Ocaml implementation.
 
+Pull requests are welcome !
+
 ## License
 
 This software is licensed under
