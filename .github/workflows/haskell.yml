@@ -1,0 +1,24 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Haskell
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  runhaskell:
+    name: Ackermann 3 12
+    runs-on: ubuntu-latest # or macOS-latest, or windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-haskell@v1.1
+        with:
+          ghc-version: '8.8' # Resolves to the latest point release of GHC 8.8
+          cabal-version: '3.0.0.0' # Exact version of Cabal
+      - run: runhaskell ackermann.hs 3 12
