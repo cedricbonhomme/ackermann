@@ -54,8 +54,8 @@ unsigned int formula_ackermann(unsigned int m, unsigned int n) {
 
 int main(int argc, char* argv[]) {
     unsigned int m, n, result;
-    m = 3 //(unsigned)atoi(argv[1]);
-    n = 12 //(unsigned)atoi(argv[2]);
+    m = (unsigned)atoi(argv[1]);
+    n = (unsigned)atoi(argv[2]);
 
     calls = 0;
     result = naive_ackermann(m, n);
