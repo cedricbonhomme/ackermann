@@ -6,7 +6,7 @@ echo
 echo "Compiling Go version..."
 go build -o ackermann-go ./ackermann.go
 echo
-echo "Compiling Pascal version..."
+echo "Compiling Ocaml version..."
 ocamlc ./ackermann.ml -o ackermann-ocaml
 echo
 echo "Compiling Haskell version..."
